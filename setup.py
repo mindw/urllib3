@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from setuptools import setup
-
 import os
 import re
 import codecs
@@ -45,12 +44,15 @@ setup(name='urllib3',
                 'urllib3.util',
                 ],
       requires=[],
+      install_requires=['six'],
       tests_require=[
           # These are a less-specific subset of dev-requirements.txt, for the
           # convenience of distro package maintainers.
           'nose',
           'mock',
           'tornado',
+          'nose-cov',
+          'tox',         
       ],
       test_suite='test',
       extras_require={
@@ -61,7 +63,7 @@ setup(name='urllib3',
               'certifi',
           ],
           'socks': [
-              'PySocks>=1.5.6,<2.0,!=1.5.7',
+              'PySocks>=1.5.6,<2.0',
           ]
       },
       )
