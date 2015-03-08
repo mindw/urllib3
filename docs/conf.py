@@ -219,7 +219,7 @@ html_sidebars = {
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'urllib3doc'
+#htmlhelp_basename = 'urllib3doc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
