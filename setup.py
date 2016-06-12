@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+from setuptools import setup, find_packages
 import os
 import re
 import codecs
@@ -38,11 +38,7 @@ setup(name='urllib3',
       author_email='andrey.petrov@shazow.net',
       url='https://urllib3.readthedocs.io/',
       license='MIT',
-      packages=['urllib3',
-                'urllib3.packages', 'urllib3.packages.ssl_match_hostname',
-                'urllib3.packages.backports', 'urllib3.contrib',
-                'urllib3.util',
-                ],
+      packages=find_packages(exclude=["dummyserver", "test", "test.*"]),
       requires=[],
       install_requires=['six'],
       tests_require=[
